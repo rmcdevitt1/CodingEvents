@@ -15,11 +15,25 @@ namespace CodingEvents.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            Events.Add("Strange Loop");
-            Events.Add("Grace Hopper");
-            Events.Add("Code With Pride");
+            //Events.Add("Strange Loop");
+            //Events.Add("Grace Hopper");
+            //Events.Add("Code With Pride");
             ViewBag.events = Events;
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/Events/Add")]
+        public IActionResult NewEvent(string name)
+        {
+            Events.Add(name);
+            return Redirect("/Events");
         }
     }
 }
