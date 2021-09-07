@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Events\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Events\" />
+  </ItemGroup>
 </Project>
