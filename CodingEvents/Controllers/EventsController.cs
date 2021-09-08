@@ -12,7 +12,7 @@ namespace CodingEvents.Controllers
     {
         //static private List<string> Events = new List<string>();
 
-        //TODO1: make it a dictionary
+        
         private static Dictionary<string, string> Events = new Dictionary<string, string>();
 
         // GET: /<controller>/
@@ -34,9 +34,9 @@ namespace CodingEvents.Controllers
 
         [HttpPost]
         [Route("/Events/Add")]
-        public IActionResult NewEvent(string name)
+        public IActionResult NewEvent(string name, string description)
         {
-            Events.Add(name);
+            Events.Add(name, description);
             return Redirect("/Events");
         }
     }
