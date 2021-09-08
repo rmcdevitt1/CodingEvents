@@ -10,15 +10,33 @@
 }
 
 @*<ul>
-    @foreach(string meeting in ViewBag.events)
-    {
-        <li>@meeting</li>
-    }
-</ul>*@
+        @foreach(string meeting in ViewBag.events)
+        {
+            <li>@meeting</li>
+        }
+    </ul>*@
 
-<table>
-    @foreach (KeyValuePair<string, string> kvp in ViewBag.events)
-    {
-        <tr>@kvp</tr>;
-    }
+@*<table>
+        @foreach (KeyValuePair<string, string> kvp in ViewBag.events)
+        {
+            <tr>@kvp</tr>;
+        }
+</table>*@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (KeyValuePair<string, string> kvp in ViewBag.events)
+            {
+                <td scope="row">@kvp.Key</td>;
+                <td scope="row">@kvp.Value</td>;
+            }
+        </tr>
+</tbody>
 </table>
