@@ -51,7 +51,7 @@ namespace CodingEvents.Controllers
             return Redirect("/Events");
         }
 
-        [Route("/Events/Edit/{eventId?}")] //not sure if correct
+        [Route("/Events/Edit/{eventId?}")]
         public IActionResult Edit(int eventId)
         {
             ViewBag.evt = EventData.GetById(eventId);
