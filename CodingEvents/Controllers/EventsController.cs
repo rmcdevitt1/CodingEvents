@@ -12,7 +12,7 @@ namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
-        
+        //hi
         // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
