@@ -12,7 +12,7 @@ namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
-        //hi
+
         // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
@@ -50,5 +50,25 @@ namespace CodingEvents.Controllers
             }
             return Redirect("/Events");
         }
+
+        [Route("/Events/Edit/{eventId?}")] //not sure if correct
+        public IActionResult Edit(int eventId)
+        {
+            ViewBag.evt = EventData.GetById(eventId);
+            ViewBag.title = "Edit Event " + ViewBag.evt.Name + " (id = " + ViewBag.evt.Id + ")";
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/Events/Edit")]
+        public IActionResult SubmitEditEventForm(int eventId, string name, string description)
+        {
+            ViewBag.evt = EventData.GetById(eventId);
+            ViewBag.evt.Name = name;
+            ViewBag.evt.Description = description;
+
+            return Redirect("/Events");
+        }
+
     }
 }
