@@ -1,5 +1,7 @@
 ﻿using System;
 namespace CodingEvents.Models
+
+//hi
 {
     public class Event
     {

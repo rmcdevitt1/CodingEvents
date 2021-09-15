@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using CodingEvents.Models;
 
+//hi
+
 namespace CodingEvents.Data
 {
     public class EventData
