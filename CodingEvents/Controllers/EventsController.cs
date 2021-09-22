@@ -31,7 +31,6 @@ namespace CodingEvents.Controllers
             return View(addEventViewModel);
         }
 
-
         //processing viewform
         [HttpPost]
         public IActionResult Add(AddEventViewModel addEventViewModel)

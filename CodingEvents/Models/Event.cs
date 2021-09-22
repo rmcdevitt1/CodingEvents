@@ -4,13 +4,16 @@ namespace CodingEvents.Models
 {
     public class Event
     {
+        //Data
         public string Name { get; set; }
         public string Description { get; set; }
         public string ContactEmail { get; set; }
         public EventType Type { get; set; }
 
+        //Fake Storage
         public int Id { get; }
         private static int nextId = 1;
+
 
         public Event()
         {
