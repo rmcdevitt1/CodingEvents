@@ -16,5 +16,13 @@ namespace CodingEvents.ViewModels
         [EmailAddress]
         public string ContactEmail { get; set; }
 
+        //This property should not be null or blank.
+        [Required(ErrorMessage = "This field is required")]
+        public string EventLocation { get; set; }
+
+        //should be any number between zero and 100,000
+        [Range(0, 100000)]
+        public int NumOfAttendees { get; set; }
+
     }
 }
