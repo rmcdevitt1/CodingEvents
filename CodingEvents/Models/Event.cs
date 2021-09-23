@@ -9,6 +9,7 @@ namespace CodingEvents.Models
         public string ContactEmail { get; set; }
         public string EventLocation { get; set; }
         public int NumOfAttendees { get; set; }
+        public bool RegistrationRequired { get; set; }
 
         public int Id { get; }
         private static int nextId = 1;
@@ -19,13 +20,14 @@ namespace CodingEvents.Models
             nextId++;
         }
 
-        public Event(string name, string description, string contactEmail, string eventLocation, int numOfAttendees) :this()
+        public Event(string name, string description, string contactEmail, string eventLocation, int numOfAttendees, bool registrationRequired) :this()
         {
             Name = name;
             Description = description;
             ContactEmail = contactEmail;
             EventLocation = eventLocation;
             NumOfAttendees = numOfAttendees;
+            RegistrationRequired = registrationRequired;
         }
 
         public override string ToString()

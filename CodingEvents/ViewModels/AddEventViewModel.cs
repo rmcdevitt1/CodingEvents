@@ -17,17 +17,18 @@ namespace CodingEvents.ViewModels
         public string ContactEmail { get; set; }
 
         //This property should not be null or blank.
-        [Required(ErrorMessage = "This field is required")]
+        [Required(ErrorMessage = "This field is required.")]
         public string EventLocation { get; set; }
 
         //should be any number between zero and 100,000
         [Range(0, 100000)]
         public int NumOfAttendees { get; set; }
 
-
-        public string RegistrationRequired { get; set; }
-
-        [Compare("RegistrationRequired")]
         public bool IsTrue { get { return true; } }
+
+        [Compare("IsTrue", ErrorMessage = "Registration is required.")]
+        public bool RegistrationRequired { get; set; }
+
+
     }
 }
