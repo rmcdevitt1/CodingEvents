@@ -24,5 +24,10 @@ namespace CodingEvents.ViewModels
         [Range(0, 100000)]
         public int NumOfAttendees { get; set; }
 
+
+        public string RegistrationRequired { get; set; }
+
+        [Compare("RegistrationRequired")]
+        public bool IsTrue { get { return true; } }
     }
 }

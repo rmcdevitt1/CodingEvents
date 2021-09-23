@@ -37,17 +37,21 @@
         <th>
             Number of Attendees
         </th>
+        <th>
+            Is Registration Required?
+        </th>
     </tr>
     @foreach (var evt in Model)
     {
-        <tr>
-            <td>@evt.Id</td>
-            <td>@evt.Name</td>
-            <td>@evt.Description</td>
-            <td>@evt.ContactEmail</td>
-            <td>@evt.EventLocation</td>
-            <td>@evt.NumOfAttendees</td>
-            <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.Id">Edit Event</a></td>
-        </tr>
+<tr>
+    <td>@evt.Id</td>
+    <td>@evt.Name</td>
+    <td>@evt.Description</td>
+    <td>@evt.ContactEmail</td>
+    <td>@evt.EventLocation</td>
+    <td>@evt.NumOfAttendees</td>
+    <td>@evt.RegistrationRequired</td>
+    <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.Id">Edit Event</a></td>
+</tr>
     }
 </table>

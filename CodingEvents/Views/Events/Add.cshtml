@@ -9,25 +9,35 @@
         <input asp-for="Name" />
         <span asp-validation-for="Name"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Description"></label>
         <input asp-for="Description" />
         <span asp-validation-for="Description"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="ContactEmail">Contact Email</label>
         <input asp-for="ContactEmail" />
         <span asp-validation-for="ContactEmail"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="EventLocation">Event Location</label>
         <input asp-for="EventLocation" />
         <span asp-validation-for="EventLocation"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="NumOfAttendees">Number of Attendees</label>
         <input asp-for="NumOfAttendees" />
         <span asp-validation-for="NumOfAttendees"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegistrationRequired">Is Registration Required?</label>
+        <input asp-for="RegistrationRequired" />
+        <span asp-validation-for="RegistrationRequired"></span>
     </div>
     <input type="submit" value="Add Event" />
 </form>
